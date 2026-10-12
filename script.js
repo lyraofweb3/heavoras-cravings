@@ -1,5 +1,5 @@
-// TODO: Replace with the real WhatsApp number (international format, digits only, no +). e.g. 2348012345678
-const WHATSAPP_NUMBER = "234XXXXXXXXXX";
+// WhatsApp number (international format, digits only, no +)
+const WHATSAPP_NUMBER = "2349068563859";
 
 // ✏️ EDIT YOUR MENU HERE. Prices are PLACEHOLDERS in Naira (₦).
 const MENU = [
@@ -18,12 +18,15 @@ const MENU = [
 const naira = n => "₦" + n.toLocaleString("en-NG");
 const waUrl = msg => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 
+const itemLink = i => waUrl(`Hello Heavora's Cravings! I'd like to order: ${i.name} (${i.category}) - ${naira(i.price)}. Quantity: 1. Please confirm availability.`);
+if (typeof module !== "undefined") module.exports = { MENU, itemLink };
+
 const grid = document.getElementById("menu-grid");
 function render(cat = "all") {
   grid.innerHTML = MENU.filter(i => cat === "all" || i.category === cat).map(i => `
     <div class="card"><div class="e">${i.emoji}</div><h3>${i.name}</h3><p>${i.desc}</p>
     <div class="row"><span class="price">${naira(i.price)}</span>
-    <button data-item="${i.name}">Order</button></div></div>`).join("");
+    <a class="order-btn" href="${itemLink(i)}" target="_blank" rel="noopener">Order</a></div></div>`).join("");
 }
 render();
 document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
@@ -33,10 +36,6 @@ document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () =>
 
 const select = document.getElementById("item-select");
 select.innerHTML = MENU.map(i => `<option>${i.name}</option>`).join("") + "<option>Other / Custom</option>";
-grid.addEventListener("click", e => {
-  const b = e.target.closest("button[data-item]"); if (!b) return;
-  select.value = b.dataset.item; document.getElementById("order").scrollIntoView();
-});
 
 document.getElementById("order-form").addEventListener("submit", e => {
   e.preventDefault();

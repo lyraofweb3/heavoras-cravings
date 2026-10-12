@@ -24,7 +24,7 @@ nav a{margin-left:1.5rem;text-decoration:none;font-size:.95rem}nav a:hover{color
 .card{background:#fff;border-radius:16px;padding:1.3rem;box-shadow:0 4px 16px #3b211614;border-top:4px solid var(--gold);transition:.2s}.card:hover{transform:translateY(-4px)}
 .card .e{font-size:2.4rem}.card h3{color:var(--choc);margin:.3rem 0}.card p{font-size:.88rem;opacity:.8}
 .card .row{display:flex;justify-content:space-between;align-items:center;margin-top:.8rem}.price{font-weight:600;color:var(--pink)}
-.card button{background:var(--choc);color:var(--gold);border:0;padding:.35rem .9rem;border-radius:20px;cursor:pointer;font-family:inherit}
+.card .order-btn{text-decoration:none;font-size:.9rem;background:var(--choc);color:var(--gold);border:0;padding:.35rem .9rem;border-radius:20px;cursor:pointer;font-family:inherit}
 .note{text-align:center;font-size:.85rem;margin-top:1.5rem;opacity:.7}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
 .g{height:200px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:4rem;color:#fff;box-shadow:0 6px 20px #0002}
