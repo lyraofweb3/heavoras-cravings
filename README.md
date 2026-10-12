@@ -32,7 +32,22 @@ Dark chocolate, cream and gold theme. Playfair Display headings, Inter body, Gre
 
 Swap any of these for your own product photos (same filenames) whenever you're ready.
 
-## Design Your Cake
-The `#designer` section lets customers pick size, tiers, flavour, filling, frosting and colour, toppings, a message (max 30 chars), occasion and date. A live SVG preview updates as they choose.
-- **Prices:** edit the `PRICING` object at the top of `script.js`. The values are placeholders, and the site labels the result as an estimate, with the final price confirmed on WhatsApp. Frosting colours are in `FROSTING_COLOURS` and occasions in `OCCASIONS`.
-- **Order this cake on WhatsApp** opens `wa.me/2349068563859` with the full design summary, the estimate, and a note about sending a reference photo.
+## Design Your Cake (3D)
+Section `#designer`: a 5-step wizard (Size → Flavour → Frosting → Decor → Details) with a progress bar and a real-time 3D cake.
+- **3D preview** (`cake3d.js`): Three.js r160, loaded from unpkg through the import map in `index.html` (pinned version). It includes:
+  - stacked tiers scaled by size, with matte buttercream, glossy ganache, smooth fondant, whipped and naked-sponge finishes
+  - an animated chocolate drip
+  - strawberries, macarons, gold flakes, sprinkles and flowers
+  - candles with a flickering glow
+  - the message drawn on top or around the side of a chosen tier
+  - studio lighting with soft shadows, drag/touch to rotate, auto-rotate when idle, and animated transitions
+  If WebGL or the CDN is unavailable, it falls back to the 2D SVG preview (`?no3d` forces it).
+- **Smart helpers:**
+  - "serves ~N" from size and tiers
+  - size suggestion from guest count
+  - flavour pairing tips
+  - date checks: past dates are disabled, under 48h shows a warning and adds a rush fee
+  - 3 tiers need at least an 8″ base
+  - theme presets, "Surprise me", live price breakdown, PNG download of the design, Share (native share or copy to clipboard)
+- **Editable config** at the top of `script.js`: `PRICING` (placeholder ₦ values; the site labels the result an estimate, final price on WhatsApp), `SERVINGS`, `FROSTING_COLOURS`, `TEXT_COLOURS`, `PAIRINGS`, `PRESETS`, `OCCASIONS`.
+- **Order this cake on WhatsApp** sends the full summary to `wa.me/2349068563859`: tiers and servings, flavour, filling, frosting and colour, toppings, the message with its placement, font and colour, the occasion and date, the estimate, and a note about sending a reference photo.
