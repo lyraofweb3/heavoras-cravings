@@ -51,3 +51,10 @@ const burger = document.querySelector(".burger"), links = document.getElementByI
 burger.addEventListener("click", () => burger.setAttribute("aria-expanded", links.classList.toggle("open")));
 links.addEventListener("click", e => e.target.tagName === "A" && links.classList.remove("open"));
 document.getElementById("yr").textContent = new Date().getFullYear();
+
+// Scroll reveal
+const revealEls = document.querySelectorAll("h2, .lead, .feats div, .gallery .g, .form");
+if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .15 });
+  revealEls.forEach(el => { el.classList.add("reveal"); io.observe(el); });
+}

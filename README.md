@@ -15,3 +15,6 @@ Static website for Heavora's Cravings, a bakery for Cakes, Snacks & Sweet Treats
 
 ## Run
 Open `index.html` in a browser, or deploy free with GitHub Pages / Vercel / Netlify.
+
+## Deploy (Railway)
+`npm start` serves the site on `$PORT` using `serve`.
