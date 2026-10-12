@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heavora's Cravings | Cakes, Snacks & Sweet Treats</title>
+<meta name="description" content="Heavora's Cravings: freshly baked cakes, snacks and sweet treats. Order on WhatsApp.">
+<link rel="icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="nav"><a href="#home" class="brand"><img src="assets/logo.jpg" alt="">Heavora's Cravings</a>
+<button class="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav id="links"><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#order">Order</a><a href="#contact">Contact</a></nav></header>
+<section id="home" class="hero"><img class="hero-logo" src="assets/logo.jpg" alt="Heavora's Cravings logo">
+<h1>Heavora's Cravings</h1><p class="tag">Baked with love, made to satisfy every craving.</p>
+<div class="cta"><a href="#menu" class="btn">See the Menu</a><a href="#order" class="btn ghost">Custom Order</a></div></section>
+<section id="about" class="wrap"><h2>About Us</h2><p class="lead">We're a home bakery serving rich, moist cakes, crunchy Nigerian snacks and sweet little treats for birthdays, weddings, parties, and just because. Every order is made fresh, to order.</p>
+<div class="feats"><div>🎂<h3>Fresh Daily</h3><p>Baked to order with quality ingredients.</p></div><div>🎨<h3>Custom Designs</h3><p>Tell us your theme; we'll bring it to life.</p></div><div>🚚<h3>Delivery</h3><p>Delivery and pickup available.</p></div></div></section>
+<section id="menu" class="wrap alt"><h2>Our Menu</h2>
+<div class="tabs"><button class="tab active" data-cat="all">All</button><button class="tab" data-cat="Cakes">Cakes</button><button class="tab" data-cat="Snacks">Snacks</button><button class="tab" data-cat="Sweet Treats">Sweet Treats</button></div>
+<div id="menu-grid" class="grid"></div><p class="note">Prices are placeholders and may vary with size and design.</p></section>
+<section id="gallery" class="wrap"><h2>Gallery</h2><div class="gallery">
+<div class="g g1">🎂<span>Celebration Cakes</span></div><div class="g g2">🧁<span>Cupcakes</span></div><div class="g g3">🍩<span>Doughnuts</span></div><div class="g g4">🥧<span>Meat Pies</span></div><div class="g g5">🍪<span>Chin Chin</span></div><div class="g g6">🍰<span>Parfaits & Slices</span></div></div></section>
+<section id="order" class="wrap alt"><h2>Custom Order</h2><p class="lead">Fill this in and we'll open WhatsApp with your order ready to send.</p>
+<form id="order-form" class="form">
+<label>Your name<input name="name" required></label><label>Phone<input name="phone" type="tel"></label>
+<label>Item<select name="item" id="item-select" required></select></label><label>Quantity<input name="qty" type="number" min="1" value="1"></label>
+<label>Date needed<input name="date" type="date"></label><label>Pickup or delivery<select name="mode"><option>Pickup</option><option>Delivery</option></select></label>
+<label class="full">Details (flavour, theme, message on cake…)<textarea name="notes" rows="4"></textarea></label>
+<button class="btn full" type="submit">Send on WhatsApp 💬</button></form></section>
+<footer id="contact"><img src="assets/logo.jpg" alt="" class="flogo"><h2>Let's talk cravings</h2>
+<p><a id="wa-link" href="#">💬 WhatsApp</a> · <a href="mailto:hello@example.com">✉️ hello@example.com</a> · <a href="#">📸 Instagram</a></p>
+<p class="small">© <span id="yr"></span> Heavora's Cravings. All rights reserved.</p></footer>
+<a id="wa-float" class="float" href="#" aria-label="Chat on WhatsApp">💬</a>
+<script src="script.js"></script></body></html>
