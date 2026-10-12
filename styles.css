@@ -9,7 +9,7 @@ a{color:inherit}
 .brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
 nav a{margin-left:1.5rem;text-decoration:none;font-size:.95rem}nav a:hover{color:var(--gold)}
 .burger{display:none;background:none;border:0;cursor:pointer}.burger span{display:block;width:26px;height:3px;background:var(--gold);margin:5px 0;border-radius:2px}
-.hero{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 1rem;background:radial-gradient(circle at 30% 20%,var(--choc2),var(--choc) 70%);color:var(--cream)}
+.hero{min-height:min(88vh,760px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 1rem;background:radial-gradient(circle at 30% 20%,var(--choc2),var(--choc) 70%);color:var(--cream)}
 .hero-logo{width:min(260px,60vw);aspect-ratio:1;object-fit:cover;border-radius:50%;border:5px solid var(--gold);box-shadow:0 10px 40px #0008}
 .hero h1{color:var(--gold);font-size:clamp(3rem,9vw,5.5rem);margin-top:1rem}.tag{font-size:1.15rem;opacity:.9}
 .cta{margin-top:1.6rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
