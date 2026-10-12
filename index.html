@@ -11,7 +11,7 @@
 <body>
 <header class="nav" id="nav"><a href="#home" class="brand"><img src="assets/logo.jpg" alt="">Heavora's Cravings</a>
 <button class="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-<nav id="links"><a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#order">Order</a><a href="#contact" class="nav-cta">Contact</a></nav></header>
+<nav id="links"><a href="#about">About</a><a href="#menu">Menu</a><a href="#designer">Design Your Cake</a><a href="#gallery">Gallery</a><a href="#order">Order</a><a href="#contact" class="nav-cta">Contact</a></nav></header>
 
 <section id="home" class="hero">
   <div class="hero-text">
@@ -48,6 +48,27 @@
   <div class="tabs reveal"><button class="tab active" data-cat="all">All</button><button class="tab" data-cat="Cakes">Cakes</button><button class="tab" data-cat="Snacks">Snacks</button><button class="tab" data-cat="Sweet Treats">Sweet Treats</button></div>
   <div id="menu-grid" class="grid stagger"></div>
   <p class="note">Prices are indicative and may vary with size and design. Tap <b>Order</b> to chat with us on WhatsApp.</p>
+</section>
+
+<section id="designer" class="wrap designer">
+  <div class="head reveal"><span class="eyebrow">Design your cake</span><h2>Build your dream cake</h2><p class="sub">Choose every detail and watch it come to life, then send it straight to us on WhatsApp.</p></div>
+  <div class="dz">
+    <div class="dz-preview reveal">
+      <div class="stage"><svg id="cake-svg" viewBox="0 0 320 320" role="img" aria-label="Live cake preview"></svg></div>
+      <div class="est"><span>Estimated price</span><b id="cake-price">₦0</b><small>Estimate only, final price confirmed on WhatsApp.</small></div>
+      <a id="cake-order" class="btn full" href="#" target="_blank" rel="noopener">Order this cake on WhatsApp <span>→</span></a>
+    </div>
+    <form id="cake-form" class="dz-form reveal" onsubmit="return false">
+      <fieldset><legend>Size</legend><div class="pills" data-name="size"></div></fieldset>
+      <fieldset><legend>Tiers</legend><div class="pills" data-name="tiers"></div></fieldset>
+      <div class="two"><label>Flavour<select name="flavour"></select></label><label>Filling<select name="filling"></select></label></div>
+      <fieldset><legend>Frosting</legend><div class="pills" data-name="frosting"></div>
+        <div class="swatches" role="radiogroup" aria-label="Frosting colour"></div></fieldset>
+      <fieldset><legend>Toppings</legend><div class="pills multi" data-name="toppings"></div></fieldset>
+      <label>Message on cake <small id="msg-count">0/30</small><input name="message" maxlength="30" placeholder="Happy Birthday Ada!"></label>
+      <div class="two"><label>Occasion<select name="occasion"></select></label><label>Needed by<input type="date" name="date"></label></div>
+    </form>
+  </div>
 </section>
 
 <section id="gallery" class="wrap">

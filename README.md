@@ -31,3 +31,8 @@ Dark chocolate, cream and gold theme. Playfair Display headings, Inter body, Gre
   - `sausage-roll.jpg`: "Marmite & pork sausage roll - The Roastery 2024-04-05", CC0
 
 Swap any of these for your own product photos (same filenames) whenever you're ready.
+
+## Design Your Cake
+The `#designer` section lets customers pick size, tiers, flavour, filling, frosting and colour, toppings, a message (max 30 chars), occasion and date. A live SVG preview updates as they choose.
+- **Prices:** edit the `PRICING` object at the top of `script.js`. The values are placeholders, and the site labels the result as an estimate, with the final price confirmed on WhatsApp. Frosting colours are in `FROSTING_COLOURS` and occasions in `OCCASIONS`.
+- **Order this cake on WhatsApp** opens `wa.me/2349068563859` with the full design summary, the estimate, and a note about sending a reference photo.
